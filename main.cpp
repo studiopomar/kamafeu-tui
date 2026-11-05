@@ -31,6 +31,12 @@
 #include <unistd.h>
 #endif
 
+#ifdef _WIN32
+#undef RGB
+#undef min
+#undef max
+#endif
+
 using namespace ftxui;
 
 namespace {
