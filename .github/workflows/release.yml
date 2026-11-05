@@ -23,15 +23,15 @@ jobs:
           - name: macOS Apple Silicon
             runner: macos-15
             archive: kamafeu-tui-${{ github.ref_name }}-macos-arm64.tar.gz
-            executable: build/bin/kamafeu-tui
+            executable: build/bin/Release/kamafeu-tui
           - name: macOS Intel
             runner: macos-15-intel
             archive: kamafeu-tui-${{ github.ref_name }}-macos-x64.tar.gz
-            executable: build/bin/kamafeu-tui
+            executable: build/bin/Release/kamafeu-tui
           - name: Linux x64
             runner: ubuntu-latest
             archive: kamafeu-tui-${{ github.ref_name }}-linux-x64.tar.gz
-            executable: build/bin/kamafeu-tui
+            executable: build/bin/Release/kamafeu-tui
     steps:
       - uses: actions/checkout@v4
       - name: Install build dependencies (Linux)
